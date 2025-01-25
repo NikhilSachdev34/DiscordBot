@@ -49,12 +49,11 @@ async def getResource(ctx, typeOfTool):
             resource = await pickaxeC(ctx)
             tier = userTiers[3]
 
-        await ctx.reply(embed=await embedBuilder(typeOfTool, tier, resource))
+        await ctx.reply(embed=await resourceEmbedBuilder(typeOfTool, tier, resource))
     else:
         await ctx.reply("You do not have an account! Please register.")
 
-
-async def embedBuilder(typeOfTool, tier, gainedResources):
+async def resourceEmbedBuilder(typeOfTool, tier, gainedResources):
     if typeOfTool == "axe": 
         colour=0x25C238
         lootTableToUse = AXE_LOOT
@@ -83,4 +82,3 @@ async def embedBuilder(typeOfTool, tier, gainedResources):
 
 print("ON")
 client.run(TOKEN) # Runs client
-
