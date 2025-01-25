@@ -82,4 +82,4 @@ async def resourceEmbedBuilder(typeOfTool, tier, gainedResources):
 
 print("ON")
 client.run(TOKEN) # Runs client
-#test
+#test2
